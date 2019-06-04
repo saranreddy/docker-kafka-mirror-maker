@@ -10,6 +10,7 @@ ENV PRINCIPAL "kafka/localhost@EXAMPLE.COM"
 ENV KEYTAB_FILENAME "mirror.keytab"
 
 RUN yum -y install wget
+RUN yum install deltarpm
 RUN rpm --import http://public-repo-1.hortonworks.com/ambari/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 RUN cd /etc/yum.repos.d/;wget http://public-repo-1.hortonworks.com/HDP/centos7/3.x/updates/3.1.0.0/hdp.repo
 RUN yum -y install kafka
